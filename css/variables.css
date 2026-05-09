@@ -1,0 +1,43 @@
+/* ============================================
+   CSS VARIABLES & THEME CONFIGURATION
+   ============================================ */
+
+/* Enhanced Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+  /* Primary Colors */
+  --primary: #6c63ff;
+  --primary-dark: #554fd8;
+  --secondary: #ff6584;
+  
+  /* Neutral Colors */
+  --dark: #1a1a2e;
+  --light: #f8f9fa;
+  --gray: #6c757d;
+  --light-gray: #e9ecef;
+  
+  /* Status Colors */
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  
+  /* Shadows */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.15);
+  
+  /* Transitions */
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.2s ease;
+  
+  /* Border Radius */
+  --border-radius: 16px;
+  --border-radius-sm: 8px;
+  --border-radius-lg: 24px;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #6c63ff 0%, #8b84ff 100%);
+  --gradient-secondary: linear-gradient(135deg, #ff6584 0%, #ff8e53 100%);
+  --gradient-hero: linear-gradient(135deg, #f5f7ff 0%, #eef1ff 100%);
+}

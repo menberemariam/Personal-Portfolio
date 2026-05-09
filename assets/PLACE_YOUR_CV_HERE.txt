@@ -1,0 +1,52 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║              📥 PLACE YOUR CV PDF FILE HERE                  ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+INSTRUCTIONS:
+=============
+
+1. Save your CV PDF file with this EXACT name:
+   
+   Menberemariyam-CV.pdf
+
+2. Place it in THIS folder (assets/)
+
+3. The file structure should look like this:
+
+   portfolio/
+   ├── assets/
+   │   ├── Menberemariyam-CV.pdf  ← YOUR CV HERE
+   │   ├── README.md
+   │   └── PLACE_YOUR_CV_HERE.txt (this file)
+   ├── css/
+   ├── js/
+   └── index.html
+
+4. Test the download:
+   - Open index.html in your browser
+   - Click "📥 Download CV" in the navigation
+   - Your CV should download automatically
+
+5. You can delete this file after adding your CV
+
+═══════════════════════════════════════════════════════════════
+
+IMPORTANT NOTES:
+================
+
+✓ Filename must be EXACTLY: Menberemariyam-CV.pdf
+✓ File must be in PDF format
+✓ Recommended size: Under 2MB
+✓ Make sure your CV is up-to-date
+
+═══════════════════════════════════════════════════════════════
+
+NEED HELP?
+==========
+
+Read: CV_SETUP_INSTRUCTIONS.md (in the root folder)
+Or: assets/README.md (in this folder)
+
+═══════════════════════════════════════════════════════════════

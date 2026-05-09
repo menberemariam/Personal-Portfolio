@@ -1,0 +1,18 @@
+📄 CV PLACEMENT INSTRUCTIONS
+================================
+
+To enable CV download functionality:
+
+1. Save your CV as a PDF file
+2. Name it: Menberemariyam-CV.pdf
+3. Place it in this folder (assets/)
+4. Delete this instruction file
+5. Refresh your portfolio website
+
+The "Download CV" button in the navigation will automatically work!
+
+For detailed instructions, see: CV_INSTRUCTIONS.md
+
+---
+Current Expected Filename: Menberemariyam-CV.pdf
+Current Location: assets/Menberemariyam-CV.pdf

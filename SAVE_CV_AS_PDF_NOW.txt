@@ -1,0 +1,69 @@
+═══════════════════════════════════════════════════════════════════
+  🚨 ACTION REQUIRED: SAVE YOUR CV AS PDF (30 SECONDS)
+═══════════════════════════════════════════════════════════════════
+
+YOUR CV HTML FILE SHOULD BE OPEN IN YOUR BROWSER NOW!
+
+IF NOT OPEN, GO TO: assets/Menberemariyam-CV.html and open it in browser
+
+═══════════════════════════════════════════════════════════════════
+
+FOLLOW THESE 3 STEPS:
+
+1️⃣ PRESS: Ctrl + P (or Cmd + P on Mac)
+   This opens the Print dialog
+
+2️⃣ IN THE PRINT DIALOG:
+   ✅ Destination: Select "Save as PDF" or "Microsoft Print to PDF"
+   ✅ Layout: Portrait
+   ✅ Margins: None
+   ✅ Background graphics: CHECK THIS BOX! (Very important!)
+   
+3️⃣ CLICK "SAVE" AND:
+   ✅ Name it EXACTLY: Menberemariyam-CV.pdf
+   ✅ Save it in the "assets" folder
+   
+   Full path should be:
+   C:\Users\Mem\Documents\Tutorials\Web Development Project\Front end Projects\Personal Portfolio\assets\Menberemariyam-CV.pdf
+
+═══════════════════════════════════════════════════════════════════
+
+AFTER SAVING:
+
+1. Refresh your portfolio page (F5)
+2. Click the "📥 Download CV" button
+3. Your CV will download! ✅
+
+═══════════════════════════════════════════════════════════════════
+
+WHY IT'S NOT WORKING NOW:
+❌ No PDF file exists in the assets folder
+❌ The download button is looking for: assets/Menberemariyam-CV.pdf
+❌ You only have the HTML version, not the PDF
+
+SOLUTION:
+✅ Convert the HTML to PDF (follow steps above)
+✅ Save it with the exact name: Menberemariyam-CV.pdf
+✅ Save it in the assets folder
+
+═══════════════════════════════════════════════════════════════════
+
+QUICK CHECKLIST:
+[ ] CV HTML opened in browser
+[ ] Pressed Ctrl + P
+[ ] Selected "Save as PDF"
+[ ] Checked "Background graphics"
+[ ] Named it: Menberemariyam-CV.pdf
+[ ] Saved in: assets/ folder
+[ ] Refreshed portfolio page
+[ ] Tested download button
+[ ] CV downloads successfully!
+
+═══════════════════════════════════════════════════════════════════
+
+NEED HELP? 
+- The CV HTML should be open in your browser now
+- Just press Ctrl + P and follow the steps above
+- It takes only 30 seconds!
+
+═══════════════════════════════════════════════════════════════════

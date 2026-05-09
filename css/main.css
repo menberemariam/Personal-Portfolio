@@ -1,0 +1,19 @@
+/* ============================================
+   MAIN CSS FILE - IMPORTS ALL MODULES
+   ============================================ */
+
+/* Core Styles */
+@import url('variables.css');
+@import url('base.css');
+@import url('animations.css');
+@import url('components.css');
+
+/* Layout Sections */
+@import url('navigation.css');
+@import url('hero.css');
+@import url('sections.css');
+@import url('contact.css');
+@import url('footer.css');
+
+/* Responsive Design */
+@import url('responsive.css');

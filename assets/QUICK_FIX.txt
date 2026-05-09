@@ -1,0 +1,52 @@
+═══════════════════════════════════════════════════════════
+  📥 CV DOWNLOAD - QUICK FIX (30 SECONDS)
+═══════════════════════════════════════════════════════════
+
+PROBLEM: Download button doesn't work
+REASON: No PDF file in assets folder
+
+SOLUTION (3 Steps):
+
+1️⃣ OPEN CV HTML
+   → Go to: assets/Menberemariyam-CV.html
+   → Right-click → Open with Browser
+
+2️⃣ SAVE AS PDF
+   → Press: Ctrl + P
+   → Select: "Save as PDF"
+   → ✅ Check: "Background graphics"
+   → Save as: Menberemariyam-CV.pdf
+   → Save in: assets/ folder
+
+3️⃣ TEST DOWNLOAD
+   → Open: index.html
+   → Click: "📥 Download CV" button
+   → ✅ Should download!
+
+═══════════════════════════════════════════════════════════
+
+FILE LOCATION:
+portfolio/assets/Menberemariyam-CV.pdf  ← Put PDF here!
+
+EXACT FILENAME REQUIRED:
+Menberemariyam-CV.pdf
+(case-sensitive, no spaces, exact spelling)
+
+═══════════════════════════════════════════════════════════
+
+WHAT YOU'LL SEE:
+
+❌ Before (no PDF):
+   "CV file not found! Please add Menberemariyam-CV.pdf..."
+
+✅ After (with PDF):
+   "CV Download Started!"
+   → PDF downloads to your Downloads folder
+
+═══════════════════════════════════════════════════════════
+
+NEED DETAILED HELP?
+→ Read: FIX_CV_DOWNLOAD.md
+→ Read: CONVERT_CV_TO_PDF.md
+
+═══════════════════════════════════════════════════════════

@@ -1,6 +1,7 @@
-// script.js - COMPLETE UPDATED VERSION
+// Enhanced Portfolio JavaScript - firatolin.tech inspired
 
 // DOM Elements
+const loadingScreen = document.getElementById('loading-screen');
 const navbar = document.querySelector(".navbar");
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
@@ -8,17 +9,103 @@ const backToTop = document.getElementById("backToTop");
 const currentYear = document.getElementById("currentYear");
 const contactForm = document.getElementById("contactForm");
 const submitBtn = document.getElementById("submitBtn");
-const videoModal = document.getElementById("videoModal");
 const projectModal = document.getElementById("projectModal");
 const closeModals = document.querySelectorAll(".close-modal");
-const playButtons = document.querySelectorAll(".play-button");
 const viewProjectButtons = document.querySelectorAll(".btn-view-project");
 const testimonialDots = document.querySelectorAll(".slider-dots .dot");
 const testimonialSlides = document.querySelectorAll(".testimonial");
 const prevBtn = document.querySelector(".slider-btn.prev");
 const nextBtn = document.querySelector(".slider-btn.next");
-const newsletterEmail = document.getElementById("newsletterEmail");
-const subscribeBtn = document.getElementById("subscribeBtn");
+const downloadCVBtn = document.getElementById("downloadCV");
+
+// Loading Screen Animation
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    loadingScreen.classList.add('fade-out');
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+      // Initialize AOS animations after loading
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 1000,
+          easing: 'ease-in-out',
+          once: true,
+          offset: 100
+        });
+      }
+    }, 800);
+  }, 2500);
+});
+
+// CV Download Functionality
+downloadCVBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  
+  // Create a simple CV content (you can replace this with actual CV file)
+  const cvContent = `
+MENBEREMARIAM TESHOME ASRAT
+Full-Stack Software Engineer
+
+📧 Email: menberemariam123@gmail.com
+🔗 LinkedIn: https://www.linkedin.com/in/menberemariyam
+🌐 Portfolio: https://menberemariam.dev
+
+SKILLS:
+• Languages: Java, JavaScript/TypeScript, Python
+• Frontend: React, Tailwind CSS
+• Backend: Node.js, NestJS, REST APIs
+• Databases: MongoDB, SQLite, Firestore
+• Tools: Git & GitHub, Shellscript
+
+CURRENT PROJECTS:
+• Desktop applications development
+• Mobile applications (Android & iOS)
+• Web applications end-to-end development
+
+PHILOSOPHY:
+⭐️ Design. Code. Build.
+Building scalable applications with user-centered design.
+  `;
+
+  // Create and download CV file
+  const blob = new Blob([cvContent], { type: 'text/plain' });
+  const url = window.URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'Menberemariam_Teshome_Asrat_CV.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  window.URL.revokeObjectURL(url);
+
+  // Show success message
+  showNotification('CV downloaded successfully!', 'success');
+});
+
+// Notification System
+function showNotification(message, type = 'info') {
+  const notification = document.createElement('div');
+  notification.className = `notification notification-${type}`;
+  notification.innerHTML = `
+    <div class="notification-content">
+      <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+      <span>${message}</span>
+    </div>
+  `;
+  
+  document.body.appendChild(notification);
+  
+  setTimeout(() => {
+    notification.classList.add('show');
+  }, 100);
+  
+  setTimeout(() => {
+    notification.classList.remove('show');
+    setTimeout(() => {
+      document.body.removeChild(notification);
+    }, 300);
+  }, 3000);
+}
 
 // Current year for footer
 currentYear.textContent = new Date().getFullYear();
@@ -538,4 +625,156 @@ document.addEventListener("DOMContentLoaded", () => {
       el.dataset.delay = index * 0.1 + "s";
       observer.observe(el);
     });
+
+  // Add AOS animations to skill items
+  document.querySelectorAll('.skill-item').forEach((item, index) => {
+    item.setAttribute('data-aos', 'fade-up');
+    item.setAttribute('data-aos-delay', (index * 100).toString());
+  });
+
+  // Add AOS animations to project cards
+  document.querySelectorAll('.project-card').forEach((card, index) => {
+    card.setAttribute('data-aos', 'fade-up');
+    card.setAttribute('data-aos-delay', (index * 200).toString());
+  });
+
+  // Add typing effect to hero title
+  const heroTitle = document.querySelector('.developer-title');
+  if (heroTitle) {
+    heroTitle.style.overflow = 'hidden';
+    heroTitle.style.whiteSpace = 'nowrap';
+    heroTitle.style.borderRight = '3px solid var(--primary)';
+    heroTitle.style.animation = 'typing 4s steps(40, end), blink-caret 0.75s step-end infinite';
+  }
+
+  // Add floating animation to profile image
+  const profileImage = document.querySelector('.profile-image-container');
+  if (profileImage) {
+    profileImage.style.animation = 'float 6s ease-in-out infinite';
+  }
+
+  // Add smooth reveal for current work section
+  const currentWork = document.querySelector('.current-work');
+  if (currentWork) {
+    currentWork.style.opacity = '0';
+    currentWork.style.transform = 'translateY(20px)';
+    
+    setTimeout(() => {
+      currentWork.style.transition = 'all 0.8s ease';
+      currentWork.style.opacity = '1';
+      currentWork.style.transform = 'translateY(0)';
+    }, 2000);
+  }
+});
+// Modern Scroll Progress Indicator
+function createScrollIndicator() {
+  const scrollIndicator = document.createElement('div');
+  scrollIndicator.className = 'scroll-indicator';
+  document.body.appendChild(scrollIndicator);
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.body.offsetHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    scrollIndicator.style.width = scrollPercent + '%';
+  });
+}
+
+// Enhanced Typing Effect
+function enhancedTypingEffect() {
+  const title = document.querySelector('.developer-title');
+  if (!title) return;
+
+  const text = title.textContent;
+  title.textContent = '';
+  title.style.borderRight = '3px solid var(--primary)';
+  
+  let i = 0;
+  const typeWriter = () => {
+    if (i < text.length) {
+      title.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 100);
+    } else {
+      // Remove cursor after typing is complete
+      setTimeout(() => {
+        title.style.borderRight = 'none';
+      }, 1000);
+    }
+  };
+  
+  // Start typing after a delay
+  setTimeout(typeWriter, 1500);
+}
+
+// Modern Parallax Effect for Hero Section
+function addParallaxEffect() {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const rate = scrolled * -0.5;
+    hero.style.transform = `translateY(${rate}px)`;
+  });
+}
+
+// Enhanced Skill Item Interactions
+function enhanceSkillItems() {
+  const skillItems = document.querySelectorAll('.skill-item');
+  
+  skillItems.forEach(item => {
+    item.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-10px) scale(1.05)';
+      this.style.boxShadow = '0 20px 40px rgba(108, 99, 255, 0.2)';
+    });
+    
+    item.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0) scale(1)';
+      this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
+    });
+  });
+}
+
+// Initialize all modern features
+document.addEventListener('DOMContentLoaded', () => {
+  createScrollIndicator();
+  enhancedTypingEffect();
+  addParallaxEffect();
+  enhanceSkillItems();
+  
+  // Add modern loading states
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    img.classList.add('professional-loading');
+    img.addEventListener('load', () => {
+      img.classList.remove('professional-loading');
+    });
+  });
+  
+  // Add stagger animation to hero elements
+  const heroElements = document.querySelectorAll('.hero-text > *');
+  heroElements.forEach((el, index) => {
+    el.style.animationDelay = `${index * 0.3}s`;
+  });
+});
+
+// Modern Performance Optimization
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-in');
+    }
+  });
+}, observerOptions);
+
+// Observe all sections for animations
+document.querySelectorAll('section').forEach(section => {
+  observer.observe(section);
 });
